@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://bloggerapp:test123@bloggerapplication-hv64k.mongodb.net/noted?retryWrites=true&w=majority",
+    "jwtSecret": "sl_myJwtSecret"
+}
