@@ -1,0 +1,19 @@
+header{ 
+    height: 8vh;
+
+    @include respond(tab-port){
+        height: 10vh;
+    }
+}
+
+main{
+    height: 92vh;
+
+    @include respond(tab-port){
+        height: 90vh;
+    }
+
+    @include respond(desktop){
+        height: auto;
+    }
+}

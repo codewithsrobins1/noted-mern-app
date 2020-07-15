@@ -1,0 +1,90 @@
+.note-details{
+    margin-top: 2rem;
+
+    & h3{
+        font-size: 1.5rem;
+
+        @include respond(desktop){
+            font-size: 2rem;
+        }
+
+        &:not(:last-child){
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__about{
+
+        & span{
+            font-size: 1.3rem;
+            font-weight: 400;
+
+            @include respond(desktop){
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__link{
+
+        &--blue{
+            color: $color-blue;
+            font-size: 1.3rem;
+            transition: .2s;
+            border-bottom: 2px solid transparent;
+
+            &:hover{
+                border-bottom: 2px solid $color-blue;
+            }
+
+            @include respond(desktop){
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__description {
+        font-size: 1.25rem;
+        padding-bottom: 4rem;
+
+        @include respond(desktop){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__buttons{
+        text-align: center;
+
+        & button{
+            font-size: 1.5rem;
+            padding: 7px 15px;
+            text-transform: uppercase;
+            margin: 0 1rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.edit{
+    color: $color-primary-3;
+    border: 2px solid $color-primary-3;
+    background-color: $color-white;
+    transition: .2s ease-in-out;
+
+    &:hover{
+        color: $color-white;
+        background-color: $color-primary-3;
+    }
+}
+
+.delete{
+    color: $color-red;
+    border: 2px solid $color-red;
+    background-color: $color-white;
+    transition: .2s ease-in-out;
+
+    &:hover{
+        color: $color-white;
+        background-color: $color-red;
+    }
+}

@@ -1,0 +1,42 @@
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//Media Queries 
+/*
+0 - 600px: Phone
+600 - 900px: Tablet
+900 - 1200px: Desktop
+1800px + : Big Desktop
+*/
+
+//Order for Queries
+//Base + Typography > general layout + grid > page layout > components
+@mixin respond($breakpoint){
+    //If phone is passed, use media query with max-width 600px
+    //Media Queries are not affected by root default settings (ex: font size: 62.5%) (ems are best option) 1em = 16px
+    @if $breakpoint == phone {
+        @media only screen and (min-width: 37.5em) { @content }; //600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (min-width: 56.25em) { @content }; //900px
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 75em) { @content }; //1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    }
+}
+
+//Example
+
+// @include respond(phone) {
+
+// }

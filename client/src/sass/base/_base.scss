@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* border and padding no longer added to total width and total height */
+}
+
+li{
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html{
+    font-size: 62.5%; /* Want 62.5% of the default root font (16px) to have rems in increments of 10px; 1 rem = 16px */
+}
+
+//Change color when user selects text
+// ::selection {
+//     background-color: $color-primary;
+//     color: $color-white;
+// }   

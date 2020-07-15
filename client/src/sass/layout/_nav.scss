@@ -1,0 +1,120 @@
+.main-nav{
+    width: 100%;
+    max-width: 150rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    @include respond(desktop){
+        justify-content: space-between;
+    }
+
+    //Logo Image
+    &__logo img{
+        height: 12rem;
+        width: 12rem;
+    }
+}
+
+.main-menu-links{
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-grey-light-2;
+    position: fixed;
+    top: 0;
+    right: -101vw; /* remove menu from view */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 650ms ease-in-out;
+
+    @include respond(tab-port){
+        flex-direction: row;
+        align-items: center;
+        width: initial;
+        height: initial;
+        background-color: initial;
+        position: initial;
+        top: initial;
+        right: initial;
+        transition: initial;
+    }
+
+    &.active{
+        right: 0;
+    }
+}
+
+.fav-icons{
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+#close-icon{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    @include respond(tab-port){
+        display: none;
+        
+    }
+}
+
+#open-icon{
+
+    @include respond(tab-port){
+        display: none;
+    }
+}
+
+.main-nav__menu-buttons{
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+
+    @include respond(tab-port){
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.main-nav__menu-button{
+    width: 100%;
+    display: block;
+    margin: 2rem 0;
+    outline: none;
+    padding: 1.5rem;
+    border-radius: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    @include respond(tab-port){
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    }
+}
+
+#sign-up{
+    background-color: $color-white;
+    color: $color-primary-3;
+    border: 2px solid $color-primary-3;
+    
+}
+
+#space{
+    @include respond(tab-port){
+        margin-right: 3rem;
+    }
+}
+
+#sign-in{
+    background-color: $color-primary-3;
+    color: $color-white;
+    border: 2px solid transparent;
+}
+

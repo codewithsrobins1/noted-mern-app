@@ -1,0 +1,65 @@
+.notes-index-container{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding: 0 3rem;
+}
+
+
+.notes-index-heading{
+    padding-bottom: 1rem;
+    border-bottom: 4px solid $color-grey-dark-1;
+    display: flex;
+    justify-content: space-between;
+
+    & h1{
+        font-size: 2.5rem;
+    }
+
+    &__new-note{
+        display: flex;
+        align-items: center;
+
+        & .fav-icons{
+            font-size: 3rem;
+            color: $color-primary-5;
+            margin-left: 1rem;
+        }
+    }
+}
+
+.notes-index-container__all-notes{
+    margin-top: 3rem;
+}
+
+.notes-index-container__note{
+    border-left: 5px solid $color-primary-3;
+    padding-left: 10px;
+    margin-bottom: 4rem;
+    
+    &-title{
+        font-size: 2.5rem;
+    }
+
+    &-date{
+        font-size: 1.2rem;
+        color: $color-primary-6;
+        font-weight: 600;
+        padding: 5px 0;
+
+        @include respond(desktop){
+            font-size: 1.4rem;
+        }
+    }
+
+    &-description{
+        font-size: 1.4rem;
+
+        @include respond(desktop){
+            font-size: 1.6rem;
+        }
+    }
+}
+
+

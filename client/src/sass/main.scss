@@ -1,0 +1,45 @@
+//Abstract Folder - Functions, Mixins, Variables
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+//Base Folder - Base font, text, animations, utitlities 
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+//Components - Buttons, Cards, etc
+
+//Layout - Headers, Main, Footer
+@import "layout/nav";
+@import "layout/hero";
+@import "layout/signUpForm";
+@import "layout/signInForm";
+@import "layout/note";
+@import "layout/notesIndex";
+@import "layout/newNote";
+@import "layout/editNote";
+
+//Pages - Home page, menu page, contact us page, etc
+@import "pages/landing";
+@import "pages/signUpForm";
+@import "pages/editNote";
+@import "pages/newNote";
+@import "pages/note";
+@import "pages/notesIndex";
+
+//Themes - nightmode
+
+//Vendors - Bootstrap, Tailwind, and 3rd party library
+
+
+
+
+
+
+
+
+
+
+
+
