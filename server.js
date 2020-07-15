@@ -21,10 +21,10 @@ mongoose.connect(mongoDB, {
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err))
 
-//Use Routes
-app.use('/api/notes', require('./routes/api/notes'))
-// app.use('/api/users', require('./routes/api/users'))
-// app.use('/api/auth', require('./routes/api/auth'))
+//Routes
+app.use('/api/notes', require('./routes/api/notes'))    // CRUD Routes for Notes
+app.use('/api/users', require('./routes/api/users'))    // Register New Users When Signing Up
+app.use('/api/auth', require('./routes/api/auth'))      // Authenticate Users During Sign In
 
 
 //Serve Static Assets if in production

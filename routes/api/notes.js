@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-// const auth = require('../../middleware/auth')   //protect routes
+const auth = require('../../middleware/auth')   //protect routes
 
 
 //Note Model
@@ -9,7 +9,7 @@ const Note = require('../../models/Note');
 // @route GET api/notes 
 // @desc Get All notes
 // @access Public (NEED TO BE AUTHENTICATED)
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
     Note.find() //grab notes from DB and return in JSON form {about: , link: , note: , date:}
         .sort({ date: -1})  //descending sort by date (newest on top)
         .then(notes => res.json(notes))
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 // @route POST api/notes 
 // @desc  Create a note
 // @access Private  (NEED TO BE AUTHENTICATED)
-router.post('/', (req, res) => {
+router.post('/', auth, (req, res) => {
     const newNote = new Note({
         title: req.body.title,
         about: req.body.about,
@@ -52,7 +52,7 @@ router.post('/', (req, res) => {
 // @route DELETE api/notes/:id 
 // @desc  Delete a note
 // @access Private (NEED TO BE AUTHENTICATED)
-router.delete('/:id', (req, res) => {
+router.delete('/:id', auth, (req, res) => {
     Note.findById(req.params.id)    //get the ID from the URL
         .then(note => note.remove()
             .then(() => res.json({success: true})))
